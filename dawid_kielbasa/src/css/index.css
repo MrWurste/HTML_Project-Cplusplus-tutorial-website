@@ -1,0 +1,199 @@
+/*Basic html*/
+html {
+    background-color: lightgray;
+    background-image: url('../resources/images/pexels-thisisengineering-3861959.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Robodo', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+}
+
+a:link,
+a:visited {
+    color: darkblue;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+}
+
+#header {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 55px;
+    max-height: 55px;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.8);
+    max-width: 60vmax;
+    justify-self: center;
+    margin: auto;
+    flex: 1;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
+
+#footer {
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    color: white;
+    bottom: 0;
+}
+
+.Logo {
+    align-self: center;
+}
+
+.Header_Links {
+    display: flex;
+    flex-direction: row;
+    gap: 5vmax;
+    text-decoration: none;
+    list-style: none;
+    font-size: 18px;
+    color: white;
+}
+
+.Header_Links>li>a:link,
+.Header_Links>li>a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.Header_Links>li>a:hover {
+    font-size: 20px;
+}
+
+.Header_Links>li>a:active {
+    color: red;
+}
+
+/*No space between this two sections*/
+#nospaceafter {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#nospaceabove {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/*Modal images*/
+#modalable {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#modalable:hover {
+    opacity: 0.7;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 100vmax;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content,
+#caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/*Custom scrollbar*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.8)
+}
